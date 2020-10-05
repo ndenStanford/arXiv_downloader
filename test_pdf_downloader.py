@@ -62,7 +62,6 @@ class TestPdfDownloader(unittest.TestCase):
         num_files=len(downloaded_files)
         self.assertEqual(num_files, 0, "Should be 0")
          
-    '''
     # test with large query 
     def test_pdf_large(self):
         self.manage_folder()
@@ -75,7 +74,6 @@ class TestPdfDownloader(unittest.TestCase):
         downloaded_files=os.listdir(folder_name)
         num_files=len(downloaded_files)
         self.assertEqual(num_files, 20, "Should be 20")
-    '''
 
 if __name__ == '__main__':
     unittest.main()
