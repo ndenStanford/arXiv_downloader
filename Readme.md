@@ -47,6 +47,13 @@ Example of valid parameters and format:
 * maxResult: 5
 * folderName: 'arXiv papers'
 
+## Unit Testing
+Run testing via command
+
+```
+python test_pdf_downloader.py
+```
+
 
 
 
