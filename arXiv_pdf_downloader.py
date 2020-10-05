@@ -72,8 +72,6 @@ def download_arXiv_pdf(search_query, search_by='all', sort_by='relevance', max_r
         print("Directory " , folder_name ,  " already exists. Plese request a different folder name to prevent papers from mixing up")
     
     download_pdf_parallel(download_pdf, pdf_info)
-  
-
 
 
 if __name__ == '__main__':
