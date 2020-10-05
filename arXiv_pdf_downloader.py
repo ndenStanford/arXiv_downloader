@@ -82,10 +82,10 @@ if __name__ == '__main__':
     Use this script to download papers from argXiv. 
     """)
     parser.add_argument("--search", help="Search query")
-    parser.add_argument("--search_by", help="Search by")
-    parser.add_argument("--sort_by", help="Sort by")
-    parser.add_argument("--max_results", help="Number of requested papers")
-    parser.add_argument("--folder_name", help="Name of the folder where papers will be stored")
+    parser.add_argument("--search_by", default='all', choices=['ti', 'au', 'abs', 'co', 'jr', 'cat', 'rn', 'all'], help="Search by")
+    parser.add_argument("--sort_by", default='relevance', choices=['relevance', 'lastUpdatedDate', 'submittedDate'], help="Sort by")
+    parser.add_argument("--max_results", default=1, help="Number of requested papers")
+    parser.add_argument("--folder_name", default='fetched_pdf', help="Name of the folder where papers will be stored")
     args=parser.parse_args()
     
     search_query=args.search
