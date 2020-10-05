@@ -10,7 +10,6 @@ import sys
 import argparse 
 import os
 import re
-import urllib.request
 import urllib
 from lxml import etree
 from lxml import html
@@ -40,10 +39,10 @@ def call_arXiv_API(search_query, search_by, sort_by, max_results, folder_name):
     
     
     # Check number of available files
-    print('requesting {max_results} files'.format(max_results=max_results))
+    print('Requesting {max_results} files'.format(max_results=max_results))
     if len(pdf_urls)<int(max_results):
         matching_pdf_num=len(pdf_urls)
-        print('only {matching_pdf_num} files available'.format(matching_pdf_num=matching_pdf_num))
+        print('Only {matching_pdf_num} files available'.format(matching_pdf_num=matching_pdf_num))
     
     return pdf_info
 
