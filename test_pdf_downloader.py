@@ -8,21 +8,15 @@ Created on Mon Oct  5 00:09:48 2020
 
 import unittest
 import shutil
+import os
+from arXiv_pdf_downloader import *
 
 
 class TestSum(unittest.TestCase):
-    
-    
-
-    def test_sum(self):
-        self.assertEqual(sum([1, 2, 3]), 6, "Should be 6")
-
-    def test_sum_tuple(self):
-        self.assertEqual(sum((1, 2, 3)), 6, "Should be 6")
         
-    def manage_folder():
+    def manage_folder(self):
         folder_name='test_arXiv_downloader'
-        if not os.path.isdir(path)
+        if not os.path.isdir(folder_name):
             # Create target Directory
             os.mkdir(folder_name)
         else:
@@ -30,7 +24,7 @@ class TestSum(unittest.TestCase):
             
     # test with normal query 
     def test_pdf_normal_1(self):
-        manage_folder()
+        self.manage_folder()
         search_query='cnn'
         search_by='all'
         sort_by='relevance'
@@ -43,7 +37,7 @@ class TestSum(unittest.TestCase):
         
     # test with normal query 
     def test_pdf_normal_2(self):
-        manage_folder()
+        self.manage_folder()
         search_query='nlp'
         search_by='abs'
         sort_by='lastUpdatedDate'
@@ -56,7 +50,7 @@ class TestSum(unittest.TestCase):
         
     # test with query that should not return any matching 
     def test_pdf_no_result(self):
-        manage_folder()
+        self.manage_folder()
         search_query='fueirbfejbiuhekjfbehirgfwalfhnksjefeirlba'
         search_by='jr'
         sort_by='submittedDate'
