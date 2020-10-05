@@ -12,7 +12,7 @@ import os
 from arXiv_pdf_downloader import *
 
 
-class TestSum(unittest.TestCase):
+class TestPdfDownloader(unittest.TestCase):
         
     def manage_folder(self):
         folder_name='test_arXiv_downloader'
